@@ -6,6 +6,9 @@
     <meta name="description" content="Web Components Test">
     <meta name="author" content="DavidYell">
 
+    <link rel="stylesheet" href="components/x-tag-slidebox/src/slidebox.css">
+    <link rel="stylesheet" href="components/x-tag-helloworld/src/helloworld.css">
+
     <link rel="stylesheet" href="css/styles.css?v=1.0">
 
     <!--[if lt IE 9]>
@@ -20,9 +23,27 @@
     <p>This page uses X-Tags from <a href="http://www.x-tags.org/" title="X-Tags">X-Tags.org</a>.</p>
     <p>See if your browser supports Web Components. <a href="http://html5-demos.appspot.com/static/webcomponents/index.html">HTML5 Demos</a></p>
 
+    <h2>Slidebox</h2>
+    <a href="#" onclick="javascript:document.getElementById('slider').slidePrevious()">&laquo; Previous</a>
+    <a href="#" onclick="javascript:document.getElementById('slider').slideNext()">Next &raquo;</a>
+    <x-slidebox id="slider">
+        <x-slides>
+            <x-slide><img src="http://lorempixel.com/400/200" /></x-slide>
+            <x-slide><img src="http://lorempixel.com/400/200" /></x-slide>
+            <x-slide><img src="http://lorempixel.com/400/200" /></x-slide>
+            <x-slide><img src="http://lorempixel.com/400/200" /></x-slide>
+        </x-slides>
+    </x-slidebox>    
+
+    <h2>Daves Hello World</h2>
     <x-helloworld></x-helloworld>
 
+    <script src="components/x-tag-core/src/core.js"></script>
 
-    <script src="x-tag-components/x-tag-components.js"></script>
+    <script src="components/x-tag-slidebox/demo/x-tag-components.js"></script>
+    <script src="components/x-tag-slidebox/src/slidebox.js"></script>
+
+    <script src="components/x-tag-helloworld/src/helloworld.js"></script>
+
 </body>
 </html>
