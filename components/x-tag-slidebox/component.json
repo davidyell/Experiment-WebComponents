@@ -1,0 +1,28 @@
+{
+  "name": "x-tag-slidebox",
+  "description": "Slides panels of content",
+  "version": "0.0.0",
+  "keywords": [
+    "web-components",
+    "slidebox",
+    "structural",
+    "element",
+    "x-tag"
+  ],
+  "main": [
+    "src/slidebox.js",
+    "src/slidebox.css"
+  ],
+  "dependencies": {
+    "x-tag-core": "*"
+  },
+  "gitHead": "2f058217db73feec4d7c77ed10a1839d3cdfad20",
+  "readme": "## Install\n\n*Requirements*\n\nNode / NPM\n\nBower (Package Manager)\n\n```\nnpm install bower -g\n```\n\nInside your project run:\n\n```\nbower install x-tag-slidebox\n```\n\nThis downloads the component and dependencies to ./components\n\n\n\n\n## Syntax\n\nSlidebox allows you to create slides of any content and then transition between them.  It supports x and y axis transitions.\n\n```\n<x-slidebox>\n  <x-slides>\n    <x-slide><img src=\"demo/birnimal-calendar.png\" /></x-slide>\n    <x-slide><img src=\"demo/birnimal-graph.png\" /></x-slide>\n    <x-slide><img src=\"demo/birnimal-detail.png\" /></x-slide>\n    <x-slide><img src=\"demo/birnimal-settings.png\" /></x-slide>\n  </x-slides>\n</x-slidebox>\n```\n\n\n## Events\n```slideend``` is fired at the end of each transition.\n\n```\n  document.getElementsByNames('x-slidebox')[0].addEventListener('slideend', function(e){\n    \n  });\n\n```\n\n## Usage\n\n```\n  var slidebox = document.getElementsByNames('x-slidebox')[0];\n  slidebox.slideNext();\n  slidebox.slidePrevious();\n  slidebox.slideTo(1); // index of desired x-slide\n  \n  slidebox.orientation = 'y';  // slide veritically \n\n```\n\n\n",
+  "readmeFilename": "README.md",
+  "_id": "x-slidebox@0.1.1",
+  "commit": "2f058217db73feec4d7c77ed10a1839d3cdfad20",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/x-tag/slidebox.git"
+  }
+}
