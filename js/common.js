@@ -1,0 +1,1 @@
+xtag.register('x-helloworld');
