@@ -5,7 +5,7 @@
 xtag.register('x-helloworld', {
     lifecycle: {
         created: function() {
-            this.value = 'Hello World!';
+            this.innerHTML = 'Hello World!';
         }
     }
 });
