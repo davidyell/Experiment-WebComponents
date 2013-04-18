@@ -5,7 +5,8 @@
 xtag.register('x-helloworld', {
     lifecycle: {
         created: function() {
-            this.innerHTML = 'Hello World!';
+            var name = prompt("Your name is", "");
+            this.innerHTML = 'Hello ' + name;
         }
     }
 });
