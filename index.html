@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="components/x-tag-slidebox/src/slidebox.css">
     <link rel="stylesheet" href="components/x-tag-helloworld/src/helloworld.css">
+    <link rel="stylesheet" href="components/x-tag-button/src/x-tag-button.css">
 
     <link rel="stylesheet" href="css/styles.css?v=1.0">
 
@@ -16,27 +17,42 @@
     <![endif]-->
 </head>
 <body>
-    <h1>Web Components Test 1</h1>
-    <p>A test page to see if I can create some Web Components.</p>
-    <h2>References</h2>
-    <p>I decided to try this after <a href="http://www.youtube.com/watch?v=2txPYQOWBtg" title="Google IO presentation on YouTube">watching this Google I/O 2012 presentation</a>.</p>
-    <p>This page uses X-Tags from <a href="http://www.x-tags.org/" title="X-Tags">X-Tags.org</a>.</p>
-    <p>See if your browser supports Web Components. <a href="http://html5-demos.appspot.com/static/webcomponents/index.html">HTML5 Demos</a></p>
+    <div id="wrapper">
+        <header>
+            <h1>Web Components Test 1</h1>
+            <p>A test page to see if I can create some Web Components.</p>
+        </header>
 
-    <h2>Slidebox</h2>
-    <a href="#" onclick="javascript:document.getElementById('slider').slidePrevious()">&laquo; Previous</a>
-    <a href="#" onclick="javascript:document.getElementById('slider').slideNext()">Next &raquo;</a>
-    <x-slidebox id="slider">
-        <x-slides>
-            <x-slide><img src="http://lorempixel.com/400/200" /></x-slide>
-            <x-slide><img src="http://lorempixel.com/400/200" /></x-slide>
-            <x-slide><img src="http://lorempixel.com/400/200" /></x-slide>
-            <x-slide><img src="http://lorempixel.com/400/200" /></x-slide>
-        </x-slides>
-    </x-slidebox>    
+        <div id="content">
+            <h2>References</h2>
+            <p>I decided to try this after <a href="http://www.youtube.com/watch?v=2txPYQOWBtg" title="Google IO presentation on YouTube">watching this Google I/O 2012 presentation</a>.</p>
+            <p>This page uses X-Tags from <a href="http://www.x-tags.org/" title="X-Tags">X-Tags.org</a>.</p>
+            <p>See if your browser supports Web Components. <a href="http://html5-demos.appspot.com/static/webcomponents/index.html">HTML5 Demos</a></p>
 
-    <h2>Daves Hello World</h2>
-    <x-helloworld></x-helloworld>
+            <h2>Slidebox</h2>
+            <p><a href="http://registry.x-tags.org/x-tag/slidebox/x-slidebox/view">SlideBox on X-Registry</a></p>
+            <x-slidebox id="slider">
+                <x-slides>
+                    <x-slide><img src="http://lorempixel.com/400/200" /></x-slide>
+                    <x-slide><img src="http://lorempixel.com/400/200" /></x-slide>
+                    <x-slide><img src="http://lorempixel.com/400/200" /></x-slide>
+                    <x-slide><img src="http://lorempixel.com/400/200" /></x-slide>
+                </x-slides>
+            </x-slidebox>
+            <nav class="slidebox">
+                <a href="#" onclick="javascript:document.getElementById('slider').slidePrevious();return false;">&laquo; Previous</a>
+                <a href="#" onclick="javascript:document.getElementById('slider').slideNext();return false;">Next &raquo;</a>
+            </nav>
+
+            <h2>Daves Hello World</h2>
+            <x-helloworld></x-helloworld>
+
+            <h2>Button</h2>
+            <x-button data-label='Visit Blog' data-url="http://neon1024.wordpress.com/"></x-button>
+            <x-button class="blue" data-label='Visit Portfolio' data-url="http://paperninja.co.uk/"></x-button>
+            <x-button class="silver" data-label="Fork this!" data-url="https://github.com/davidyell/WebComponentsTest1"></x-button>
+        </div>
+    </div>
 
     <script src="components/x-tag-core/src/core.js"></script>
 
@@ -44,6 +60,8 @@
     <script src="components/x-tag-slidebox/src/slidebox.js"></script>
 
     <script src="components/x-tag-helloworld/src/helloworld.js"></script>
+
+    <script src="components/x-tag-button/src/x-tag-button.js"></script>
 
 </body>
 </html>
